@@ -1,0 +1,181 @@
+@import "./mixins/breakpoint.scss";
+@import "./mixins/helpers.scss";
+@import "./mixins/sprites.scss";
+@import "./mixins/triangle.scss";
+@import "./functions/responsive.scss";
+
+@import "./fonts.scss";
+@import "./colors.scss";
+
+body, html {
+  margin: 0 !important;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: 'SofiaPro', sans-serif;
+}
+
+.container{
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 1600px;
+
+  @include mobile{
+    padding: 0 24px;
+  }
+}
+
+img{
+  display: block;
+}
+
+.hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  z-index: -1000;
+
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  font-family: 'SofiaPro', sans-serif;
+  font-weight: 600;
+  font-size: 140px;
+  line-height: 80%;
+  letter-spacing: -0.02em;
+
+
+
+  @include laptop{
+    font-size: 100px;
+  }
+
+  @include mobile{
+    font-size: 80px;
+  }
+
+  margin: 0;
+}
+
+h2{
+  font-family: 'SofiaPro', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: 0em;
+  margin: 0;
+
+  @include laptop{
+    font-size: 60px;
+  }
+
+  @include mobile{
+    font-size: 48px;
+  }
+}
+
+h3{
+  font-family: 'SofiaPro',sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+}
+
+h4{
+  font-family: 'SofiaPro',sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0em;
+  margin: 0;
+
+  @include mobile-l{
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+h5{
+  font-family: 'SofiaPro',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  margin: 0;
+}
+
+p{
+  font-family: 'SofiaPro',sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  margin: 0;
+  letter-spacing: -0.15px;
+
+  @include mobile{
+    font-size: 18px;
+  }
+}
+
+a{
+  font-family: 'SofiaPro',sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  color: inherit;
+
+  transition: color 0.2s ease-out;
+
+  @include hoverFocus{
+    transition: color 0.2s ease-out;
+    color: var(--color-red);
+
+    text-decoration: underline;
+  }
+
+  @include mobile{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+input{
+  outline: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+textarea{
+  outline: none;
+  resize: none;
+}
+
+button{
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}

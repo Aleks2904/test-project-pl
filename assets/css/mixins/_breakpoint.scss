@@ -1,0 +1,43 @@
+@mixin desktop-xl {
+  // change the values for the situation
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+	@media (min-width: 1420px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	// change the values for the situation
+	@media (min-width: 1025px) and (max-width: 1419px) {
+		@content;
+	}
+}
+
+@mixin laptop-h {
+	@media (min-width: 1025px) and (max-height: 779px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin mobile-l {
+  @media (max-width:720px) {
+    @content;
+  }
+}
+
+@mixin h500 {
+  @media (max-height: 500px) {
+    @content;
+  }
+}
